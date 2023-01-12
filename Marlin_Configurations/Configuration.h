@@ -90,7 +90,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_CREALITY_V4  
+  #define MOTHERBOARD BOARD_CREALITY_V4
   // #define MOTHERBOARD BOARD_CREALITY_V422 //if you have 4.2.2
   // #define MOTHERBOARD BOARD_CREALITY_V427 //if you have 4.2.7
 #endif
@@ -1174,7 +1174,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 100 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1489,18 +1489,18 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-// TODO: Change to your actual values. 
-#define NOZZLE_TO_PROBE_OFFSET { -37, -12.2, -1.47 } 
+// TODO: Change to your actual values.
+#define NOZZLE_TO_PROBE_OFFSET { -37, -12.2, -1.47 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 10  // MRiscoC Avoid clips on borders
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (50*60)  // MRiscoC increase travel speed between probes
+#define XY_PROBE_FEEDRATE (180*60)  // MRiscoC increase travel speed between probes
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
-#define Z_PROBE_FEEDRATE_FAST (4*60)  // MRiscoC increase probe Z speed
+#define Z_PROBE_FEEDRATE_FAST (15*60)  // MRiscoC increase probe Z speed
 
 // Feedrate (mm/min) for the "accurate" probe of each point
 #define Z_PROBE_FEEDRATE_SLOW (Z_PROBE_FEEDRATE_FAST / 2)
